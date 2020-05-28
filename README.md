@@ -1,6 +1,6 @@
 # MuhammedZakir Personal
 
-## WARNING: I use this tap for adding `HEAD` url and also a few options. Because I install from source, bottle and tar files probably will be outdated. So this tap will be useful ONLY if you are installing development/HEAD version.
+## WARNING: I use this tap for adding `HEAD` url and a few options. Because I install from source, bottle and tar files are probably outdated. So this tap will be useful ONLY if you are installing development/HEAD version.
 
 ## How do I install these formulae?
 `brew install muhammedzakir/personal/<formula>`
