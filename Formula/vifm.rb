@@ -12,12 +12,19 @@ class Vifm < Formula
   end
 
   uses_from_macos "ncurses"
+  depends_on "libmagic" => :optional
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--without-gtk",
-                          "--without-X11"
+    args = %W[
+      --disable-dependency-tracking
+      --prefix=#{prefix}
+      --without-gtk
+      --without-X11
+    ]
+
+    args << "--without-libmagic" if build.without? "libmagic"
+
+    system "./configure", *args
     system "make"
     system "make", "check"
 
